@@ -1,6 +1,17 @@
-class Sensor {}
+class Sensor {
+    constructor(id, name, type, value, unit, update_at){
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.value = value;
+        this.unit = unit;
+        this.update_at = update_at;
+    }
+    set updateValue (value){
 
-class SensorManager {
+    }
+}
+ class SensorManager{
     constructor() {
         this.sensors = [];
     }
@@ -33,7 +44,7 @@ class SensorManager {
         }
     }
 
-    async loadSensors(url) {}
+    async loadSensors(url){}
 
     render() {
         const container = document.getElementById("sensor-container");
